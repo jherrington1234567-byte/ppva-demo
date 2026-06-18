@@ -9,7 +9,7 @@ const SP500_RETURNS = [
 export const DEFAULT_GUARANTEED_RATE = 0.055;
 
 // Carrier B product rates from the illustrator
-export function getAxonicProducts(guaranteedRate: number) {
+export function getCarrierBProducts(guaranteedRate: number) {
   return {
     guaranteedFixed: { name: "Carrier B Guaranteed Fixed", rate: guaranteedRate, guaranteed: true, volatility: 0 },
     index: { name: "Carrier B Index (0% floor / 10% cap)", rate: 0.068, guaranteed: false, volatility: 0.06 },
@@ -54,7 +54,7 @@ export function analyzeScenario(
   guaranteedRate: number = DEFAULT_GUARANTEED_RATE
 ): ScenarioResult {
   const { guaranteedFixedPct, indexPct, portfolioPct, otherPct } = scenario;
-  const products = getAxonicProducts(guaranteedRate);
+  const products = getCarrierBProducts(guaranteedRate);
 
   // Blended expected return
   const blendedReturn =

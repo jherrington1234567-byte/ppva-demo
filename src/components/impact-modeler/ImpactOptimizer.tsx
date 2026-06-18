@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { Card } from "@/components/ui/Card";
 import { NumberInput } from "@/components/ui/NumberInput";
 import { formatCurrency, formatPercent, formatCompact } from "@/lib/format";
-import { analyzeScenario, PRESET_SCENARIOS, AllocationScenario, DEFAULT_GUARANTEED_RATE } from "@/lib/calc/axonic-optimizer";
+import { analyzeScenario, PRESET_SCENARIOS, AllocationScenario, DEFAULT_GUARANTEED_RATE } from "@/lib/calc/impact-optimizer";
 import {
   LineChart, Line, AreaChart, Area, BarChart, Bar,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell,
@@ -12,7 +12,7 @@ import {
 
 const SCENARIO_COLORS = ["#dc2626", "#f59e0b", "#0086A3", "#003661", "#16a34a", "#7c3aed"];
 
-export function AxonicOptimizer() {
+export function ImpactOptimizer() {
   const [premium, setPremium] = useState(10_000_000);
   const [years, setYears] = useState(20);
   const [guaranteedRate, setGuaranteedRate] = useState(DEFAULT_GUARANTEED_RATE);

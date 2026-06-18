@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { Tabs } from "@/components/ui/Tabs";
 import { TaxDeferralPower } from "@/components/impact-modeler/TaxDeferralPower";
 import { CrossBorderModule } from "@/components/impact-modeler/CrossBorderModule";
-import { AxonicOptimizer } from "@/components/impact-modeler/AxonicOptimizer";
+import { ImpactOptimizer } from "@/components/impact-modeler/ImpactOptimizer";
 
 export default function ImpactModelerPage() {
   const tabs = [
@@ -18,7 +18,7 @@ export default function ImpactModelerPage() {
     },
     {
       label: "Carrier B Portfolio Optimizer",
-      content: <AxonicOptimizer />,
+      content: <ImpactOptimizer />,
     },
   ];
 
