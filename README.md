@@ -29,13 +29,15 @@ npm run build      # production build (verified)
 `value-overview` · `impact-modeler` · `deal-workbench` · `comp-calculator` (revenue map) ·
 `compliance-center` · `process-tracker` · `resource-library`
 
-## Going live (Turso + Netlify) — pending credentials
-SQLite writes don't persist on Netlify's serverless filesystem, so the live demo uses **Turso
-(libSQL)**:
-1. Create a free Turso DB → get `DATABASE_URL` (libsql://…) + auth token.
-2. Wire the Prisma libSQL driver adapter; set the env vars on a **new** Netlify site (separate
-   from imua.space) connected to this repo.
-3. Seed synthetic demo deals into the hosted DB.
-4. Link the live URL from the PPVA Build Lab card on imua.space + add screenshots.
+## Going live (Neon Postgres + Netlify) — pending the connection string
+The DB is **Neon (Postgres)**; Prisma is already configured for it (`schema.prisma`
+`provider = "postgresql"`, `url = env("DATABASE_URL")`).
+1. Create a free Neon project → copy the **pooled** connection string (host contains
+   `-pooler`, ends with `?sslmode=require`).
+2. Set it as `DATABASE_URL` — locally in `.env`, and as a Netlify env var on a **new** site
+   (separate from imua.space) connected to this repo.
+3. Create the table + seed: `npm run db:push` then `npm run db:seed`.
+4. Deploy on Netlify (build runs `prisma generate && next build`); link the live URL from the
+   PPVA Build Lab card on imua.space + add screenshots.
 
 **IMUA.**
