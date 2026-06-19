@@ -10,7 +10,7 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell,
 } from "recharts";
 
-const SCENARIO_COLORS = ["#dc2626", "#f59e0b", "#0086A3", "#003661", "#16a34a", "#7c3aed"];
+const SCENARIO_COLORS = ["#dc2626", "#f59e0b", "#c75f86", "#b04d72", "#16a34a", "#7c3aed"];
 
 export function ImpactOptimizer() {
   const [premium, setPremium] = useState(10_000_000);

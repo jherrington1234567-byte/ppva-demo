@@ -21,16 +21,16 @@ import {
 const QUICK_AMOUNTS = [1_000_000, 5_000_000, 10_000_000, 25_000_000, 50_000_000];
 
 const WATERFALL_COLORS = [
-  "#003661", // navy - Total Deposit
-  "#0086A3", // teal - Premium Load
-  "#00ADEE", // sky - Structures Partner
-  "#00ADEE", // sky - B/D Holdback
+  "#b04d72", // navy - Total Deposit
+  "#c75f86", // teal - Premium Load
+  "#e58aab", // sky - Structures Partner
+  "#e58aab", // sky - B/D Holdback
   "#4C5C68", // slate - OSJ Holdback
-  "#0086A3", // teal - PBWR
+  "#c75f86", // teal - PBWR
   "#4C5C68", // slate - Agency
   "#46494C", // dark gray - Admin
   "#46494C", // dark gray - Misc
-  "#003661", // navy - Net to Fund
+  "#b04d72", // navy - Net to Fund
 ];
 
 export default function CompCalculatorPage() {

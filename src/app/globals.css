@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-navy: #003661;
-  --color-teal: #0086A3;
-  --color-sky: #00ADEE;
+  /* Brand palette — imua.space pink (was the employer blues) */
+  --color-navy: #b04d72;        /* primary / nav / headings (deep pink) */
+  --color-teal: #c75f86;        /* accent (imua.space pink-s) */
+  --color-sky: #e58aab;         /* bright accent (light pink) */
   --color-slate-brand: #4C5C68;
   --color-dark-gray: #46494C;
   --color-background: #ffffff;

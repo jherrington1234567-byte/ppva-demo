@@ -50,8 +50,8 @@ export function CarrierIllustration({ years, illustratedRates, language }: Carri
             />
             <Legend />
             <Line type="monotone" dataKey="Low" stroke="#4C5C68" strokeWidth={1.5} dot={false} name={`${(illustratedRates[0] * 100).toFixed(0)}% ${rateLabel}`} />
-            <Line type="monotone" dataKey="Mid" stroke="#0086A3" strokeWidth={2} dot={false} name={`${(illustratedRates[1] * 100).toFixed(0)}% ${rateLabel}`} />
-            <Line type="monotone" dataKey="High" stroke="#003661" strokeWidth={1.5} dot={false} name={`${(illustratedRates[2] * 100).toFixed(0)}% ${rateLabel}`} />
+            <Line type="monotone" dataKey="Mid" stroke="#c75f86" strokeWidth={2} dot={false} name={`${(illustratedRates[1] * 100).toFixed(0)}% ${rateLabel}`} />
+            <Line type="monotone" dataKey="High" stroke="#b04d72" strokeWidth={1.5} dot={false} name={`${(illustratedRates[2] * 100).toFixed(0)}% ${rateLabel}`} />
           </LineChart>
         </ResponsiveContainer>
       </div>

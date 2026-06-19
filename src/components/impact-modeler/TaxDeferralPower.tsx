@@ -150,8 +150,8 @@ export function TaxDeferralPower() {
             <AreaChart data={chartData} margin={{ top: 10, right: 20, bottom: 5, left: 20 }}>
               <defs>
                 <linearGradient id="ppvaGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#0086A3" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#0086A3" stopOpacity={0.05} />
+                  <stop offset="5%" stopColor="#c75f86" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#c75f86" stopOpacity={0.05} />
                 </linearGradient>
                 <linearGradient id="taxableGrad" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#4C5C68" stopOpacity={0.2} />
@@ -163,7 +163,7 @@ export function TaxDeferralPower() {
               <YAxis tickFormatter={(v) => `$${(v / 1_000_000).toFixed(1)}M`} tick={{ fontSize: 11 }} />
               <Tooltip formatter={(value) => formatCurrency(Number(value))} labelFormatter={(l) => `Year ${l}`} />
               <Legend />
-              <Area type="monotone" dataKey="PPVA (Tax-Deferred)" stroke="#0086A3" strokeWidth={2.5} fill="url(#ppvaGrad)" />
+              <Area type="monotone" dataKey="PPVA (Tax-Deferred)" stroke="#c75f86" strokeWidth={2.5} fill="url(#ppvaGrad)" />
               <Area type="monotone" dataKey="Taxable Portfolio" stroke="#4C5C68" strokeWidth={2} strokeDasharray="5 5" fill="url(#taxableGrad)" />
             </AreaChart>
           </ResponsiveContainer>
